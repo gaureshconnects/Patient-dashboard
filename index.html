@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>PatientLens</h2>
+    <div id="patient-list"></div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <div class="header">Patient Dashboard</div>
+
+    <!-- Patient Details -->
+    <div id="patient-details" class="details"></div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <h4>Heart Rate</h4>
+        <p id="heartRate">--</p>
+      </div>
+      <div class="stat-card">
+        <h4>Blood Pressure</h4>
+        <p id="bpValue">--</p>
+      </div>
+      <div class="stat-card">
+        <h4>Status</h4>
+        <p id="status">--</p>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+      <canvas id="bpChart"></canvas>
+    </div>
+
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

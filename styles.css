@@ -1,0 +1,161 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #e2e8f0;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+.main {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== PATIENT CARD ===== */
+.patient-card {
+  background: #ffffff;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.patient-card h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.patient-card p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Hover */
+.patient-card:hover {
+  background: #eff6ff;
+  transform: translateX(4px);
+}
+
+/* Active */
+.patient-card.active {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+}
+
+/* ===== DETAILS CARD ===== */
+.details {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.details h3 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+/* ===== GRID STATS ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.stat-card h4 {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.stat-card p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 0 0;
+  color: #0f172a;
+}
+
+/* ===== CHART CARD ===== */
+.chart-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ===== SCROLLBAR ===== */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 250px;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
